@@ -1,0 +1,10 @@
+[package]
+name = "ore_forge"
+version = "0.1.0"
+authors = ["Ore Forge Team"]
+
+[addresses]
+ore_forge = "0x1"
+
+[dependencies]
+SupraFramework = { git = "https://github.com/Supra-Labs/supra-move-framework", rev = "main" }
