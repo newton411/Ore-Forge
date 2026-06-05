@@ -14,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cairo.variable} ${orbitron.variable} ${pixel.variable}`}>
-      <body className="min-h-screen bg-black text-[#fff7e7] antialiased">{children}</body>
+      <body className="min-h-screen bg-black text-[#fff7e7] antialiased">
+        {children}
+      </body>
     </html>
   );
 }
