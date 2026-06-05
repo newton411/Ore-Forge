@@ -4,7 +4,13 @@
 
 :root {
   color-scheme: dark;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-cairo), 'Segoe UI', sans-serif;
+  --cyan: #7df0d4;
+  --amber: #ffd36d;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +19,17 @@ body {
   background:
     radial-gradient(circle at top, #3a2414 0%, #1a120c 35%, #080605 100%);
   color: #fff6d8;
+  font-family: var(--font-cairo), 'Segoe UI', sans-serif;
 }
+
+h1, h2, h3, .pixel-title {
+  font-family: var(--font-orbitron), 'Courier New', monospace;
+}
+
+.pixel-title {
+  font-family: var(--font-pixel), 'Courier New', monospace;
+}
+
 
 body::before {
   content: "";

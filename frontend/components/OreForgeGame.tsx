@@ -75,19 +75,30 @@ export function OreForgeGame() {
     { name: 'Obsidian Titan', tier: 'Legendary', traits: ['Void Resonance', 'Treasury Vault', 'Hyper Forge'], bonus: '+35% multi-ore bonus' },
   ];
 
+  const highlights = [
+    'Daily mining streaks, treasury loops, and NFT evolution cards.',
+    'StarKey-ready wallet entry for a smoother on-chain launch path.',
+    'A cleaner, faster Vercel-first Next.js shell for production deployment.',
+  ];
+
   return (
     <main className="min-h-screen px-4 py-6 text-[#fff7e7] md:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-6">
         <header className="panel rounded-3xl p-6 shadow-2xl">
-          <p className="text-sm uppercase tracking-[0.45em] text-amber-200">Supra L1 Native</p>
+          <p className="text-sm uppercase tracking-[0.45em] text-amber-200">Supra L1 Native · Pixel Mining Frontier</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h1 className="text-4xl font-black text-amber-50 md:text-6xl">Ore Forge</h1>
-              <p className="mt-3 max-w-3xl text-sm text-amber-100/85 md:text-base">A premium idle mining frontier for Supra L1 with StarKey wallet support, treasury-driven rewards, evolving NFTs, and a cleaner visual loop than classic clicker sites.</p>
+              <h1 className="pixel-title text-4xl font-black text-amber-50 md:text-6xl">Ore Forge</h1>
+              <p className="mt-3 max-w-3xl text-sm text-amber-100/85 md:text-base">A premium idle mining frontier for Supra L1 with StarKey-ready wallet support, treasury-driven rewards, evolving NFTs, and the same retro-pixel energy found in top mining dApps.</p>
             </div>
             <button className="pixel-btn rounded-2xl px-4 py-3 text-sm" onClick={connectStarKey}>
               {wallet ? `Wallet: ${wallet.slice(0, 6)}…` : 'Connect StarKey'}
             </button>
+          </div>
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            {highlights.map((item) => (
+              <div key={item} className="rounded-2xl border border-amber-300/20 bg-black/15 p-4 text-sm text-amber-100/85">{item}</div>
+            ))}
           </div>
         </header>
 
