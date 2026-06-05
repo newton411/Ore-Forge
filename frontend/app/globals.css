@@ -11,18 +11,31 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, #2b1b11 0%, #160d09 35%, #070504 100%);
+    radial-gradient(circle at top, #3a2414 0%, #1a120c 35%, #080605 100%);
   color: #fff6d8;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.92));
+  pointer-events: none;
 }
 
 * { box-sizing: border-box; }
 
 button, input { font: inherit; }
 
-.pixel-card {
-  border: 2px solid rgba(255, 214, 116, 0.35);
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.25), 0 10px 30px rgba(0,0,0,0.35);
-  background: linear-gradient(135deg, rgba(20,14,8,0.95), rgba(42,29,16,0.92));
+.panel {
+  border: 1px solid rgba(255, 214, 116, 0.25);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 18px 38px rgba(0,0,0,0.36);
+  background: linear-gradient(135deg, rgba(24, 17, 10, 0.96), rgba(48, 33, 18, 0.94));
+  backdrop-filter: blur(8px);
 }
 
 .pixel-btn {
